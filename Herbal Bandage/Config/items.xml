@@ -1,0 +1,68 @@
+<configs>
+	    <append xpath="/items">
+	
+<item name="herbalBandage">
+	<property name="DisplayType" value="medical"/>
+	<property name="HoldType" value="16"/>
+	<property name="Meshfile" value="Items/Health/gauze"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="Material" value="Mcloth"/>
+	<property name="Stacknumber" value="10"/> <!-- STK medical -->
+	<property name="FuelValue" value="1"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="5"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_bandage"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="UseOther"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_bandage"/>
+	</property>
+	<property name="Group" value="Science,Basics"/>
+	<property name="DescriptionKey" value="medicalBandageDesc"/>
+	<property name="ActionSkillGroup" value="Medicine"/>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+
+
+	<effect_group tiered="false">
+		<!-- used on self -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthAmount" operation="add" value="15"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="maxHealthIncrease" operation="set" value="@medicPerkIncrease"/>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="medicalHealthAmount" operation="add" value="30"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" target="self" cvar="healthIncrease" operation="set" value="@healthPerkIncrease"/>
+		<display_value name="foodHealthAmount" value="30" />
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffInjuryBleeding"/>
+
+		<!-- used on other -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthAmount" operation="add" value="15"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.25">
+			<requirement name="CVarCompare" target="self" cvar="maxHealthIncrease" operation="Equals" value="1.25"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="1.5">
+			<requirement name="CVarCompare" target="self" cvar="maxHealthIncrease" operation="Equals" value="1.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="maxHealthIncrease" operation="set" value="2">
+			<requirement name="CVarCompare" target="self" cvar="maxHealthIncrease" operation="Equals" value="2"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalHealthAmount" operation="add" value="30"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="2.5">
+			<requirement name="CVarCompare" target="self" cvar="healthIncrease" operation="Equals" value="2.5"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="3">
+			<requirement name="CVarCompare" target="self" cvar="healthIncrease" operation="Equals" value="3"/> </triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healthIncrease" operation="set" value="4">
+			<requirement name="CVarCompare" target="self" cvar="healthIncrease" operation="Equals" value="4"/> </triggered_effect>
+
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+	</effect_group>
+</item>
+
+
+		</append>
+</configs>
