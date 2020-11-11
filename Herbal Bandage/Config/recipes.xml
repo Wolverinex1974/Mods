@@ -1,0 +1,14 @@
+<configs>
+	    <append xpath="/recipes">
+	
+           <recipe name="herbalBandage" count="1" craft_area="campfire" craft_tool="toolCookingPot">
+
+	<ingredient name="medicalBandage" count="1"/>
+	<ingredient name="resourceCropGoldenrodPlant" count="1"/>
+	<ingredient name="resourceCropChrysanthemumPlant" count="1"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="1"/>
+	<ingredient name="drinkJarRiverWater" count="1"/>
+                   </recipe>
+
+		</append>
+</configs>
