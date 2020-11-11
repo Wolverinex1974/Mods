@@ -1,0 +1,10 @@
+<configs>
+	    <append xpath="/recipes">
+	
+                <recipe name="fuelLog" count="1">
+	                  <ingredient name="ulmResourceBranch" count="16"/>
+	                  <ingredient name="resourceAnimalFat" count="1" />
+                </recipe>
+
+		</append>
+</configs>
