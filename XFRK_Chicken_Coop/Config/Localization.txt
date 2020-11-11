@@ -1,0 +1,4 @@
+Key,File,Type,UsedInMainMenu,NoTranslate,english
+FRK_Coop,Blocks,block,,,Chicken Coop
+FRK_Coop_Desc,Blocks,block,,,"Generate your own Eggs and feathers!\n\nUnlocked with the 'Living off the Land' perk."
+FRK_Coop_Full,Blocks,block,,,Full Chicken Coop

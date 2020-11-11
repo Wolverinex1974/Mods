@@ -1,0 +1,44 @@
+<FRK>
+<append xpath="/blocks">
+<block name="FRK_Coop">
+			<property name="UnlockedBy" value="perkLivingOffTheLand"/>
+			<property name="Class" value="PlantGrowing"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="Material" value="Mwood"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="Group" value="Building,advBuilding"/>
+			<property name="DescriptionKey" value="FRK_Coop_Desc"/>
+			<property name="Model" value="#@modfolder:Resources/FRK_Chicken_Coop.unity3d?ChickenCoopPrefab"/>
+			<property name="StabilitySupport" value="true"/>
+			<property name="MultiBlockDim" value="2,2,3"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="EconomicValue" value="200"/>
+			<property name="Collide" value="movement,rockets,sight,melee"/>
+			<property name="CustomIcon" value="FRK_Coop"/>
+			<property class="PlantGrowing">
+				<property name="Next" value="FRK_Coop_Full"/>
+				<property name="GrowthRate" value="150"/>
+				<property name="FertileLevel" value="0"/>
+				<property name="IsRandom" value="false"/> 
+			</property>
+			<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+		</block>
+		<block name="FRK_Coop_Full">
+			<property name="Class" value="Loot"/>
+			<property name="DisplayType" value="blockMulti"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property name="Material" value="Mwood"/>
+			<property name="Model" value="#@modfolder:Resources/FRK_Chicken_Coop.unity3d?ChickenCoopFullPrefab"/>
+			<property name="StabilitySupport" value="false"/>
+			<property name="MultiBlockDim" value="2,2,3"/>
+			<property name="Shape" value="ModelEntity"/>
+			<property name="Path" value="solid"/>
+			<property name="Collide" value="movement,rockets,sight,melee"/>
+			<property name="LootList" value="194"/>
+			<property name="CustomIcon" value="FRK_Coop_Full"/>
+			<property name="DowngradeBlock" value="FRK_Coop"/>
+		</block>
+</append>
+
+</FRK>

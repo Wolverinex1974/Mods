@@ -1,0 +1,8 @@
+<FRK>
+<append xpath="/lootcontainers" >
+		<lootcontainer id="194" size="2,1" count="2" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" destroy_on_close="true" loot_quality_template="qualPlus1Template">
+			<item name="foodEgg" count="1,5"/>
+			<item name="resourceFeather" count="1,5"/>
+		</lootcontainer>
+</append>
+</FRK>

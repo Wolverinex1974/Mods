@@ -1,0 +1,12 @@
+<FRK>
+<append xpath="/recipes">
+	<recipe name="FRK_Coop" craft_area="workbench" tags="perkLivingOffTheLand,learnable,workbenchCrafting">
+		<ingredient name="resourceWood" count="80" />
+		<ingredient name="resourceGlue" count="1" />
+		<ingredient name="resourceNail" count="10" />
+		<ingredient name="resourceCloth" count="10" />
+		<ingredient name="foodEgg" count="1" />
+	</recipe>
+</append>
+
+</FRK>

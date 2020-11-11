@@ -1,0 +1,4 @@
+Models from:
+Chicken Coop: Wolfgar74 (https://sketchfab.com/3d-models/chicken-coop-360923e446994fe8a3db68e016cc57b1) 
+Chicken: polyplant3d (https://sketchfab.com/3d-models/chicken-fef7c1969ee2420ea0e1481c3b4e6ec0)
+Used under CCA license (https://creativecommons.org/licenses/by/4.0/).
